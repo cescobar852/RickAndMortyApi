@@ -19,10 +19,11 @@ try {
         // console.log(data);
         loadingData(false);
         pintarCard(data);
-        showButton(true)
+        showButton(true);
     }
 
-    setTimeout(timer, 500);
+    // cuanto termine el ejercicio reset a 2000
+    setTimeout(timer, 10);
 
 
 
@@ -55,6 +56,9 @@ const pintarCard = (data) => {
     });
     
     cards.appendChild(fragment);
+
+    pintarPaginacion(data.info);
+
 }
 
 
@@ -70,12 +74,29 @@ const loadingData = estado => {
 }
 
 // pintar los button
+
+// Voy aqui !!!!!!!!!!!
 const showButton = estado => {
+    const templatePaginacion = document.getElementById("template-paginacion");
     const show = document.getElementById("show-button");
     
     if (estado) {
-        show.classList.remove('d-none')
+        // show.classList.remove('d-none')
+        console.log(templatePaginacion)
     } else {
-        show.classList.add('d-none');
+        // show.classList.add('d-none');
     }
+}
+
+// Hasta Aqui !!!!!!!!!!
+
+
+// pintar paginacion
+const pintarPaginacion = (data) => {
+    console.log(data);
+
+    // disabled prev button
+
+    const paginacion = document.getElementById('paginacion');
+
 }
