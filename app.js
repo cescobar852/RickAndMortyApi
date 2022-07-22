@@ -16,8 +16,9 @@ try {
     const data = await res.json();
 
     function timer () {
-        console.log(data)
+        // console.log(data);
         loadingData(false);
+        pintarCard(data);
     }
 
     setTimeout(timer, 2000);
@@ -25,11 +26,34 @@ try {
 
 
 } catch (error) {
-    
-} finally {
-    
+    console.log(error);
+} 
+
 }
 
+//pintar la card de personajes
+
+const pintarCard = (data) => {
+
+    const cards = document.getElementById('card-dinamicas');
+    cards.textContent = "";
+
+    const templateCard = document.getElementById('template-card').content;
+
+    const fragment = document.createDocumentFragment ();
+
+    data.results.forEach(item => {
+
+        const clone = templateCard.cloneNode(true);
+        clone.getElementById("CharacterName").textContent = item.name;
+        clone.getElementById("CharacterType").textContent = item.name;
+        clone.getElementById("CharacterImg").setAttribute("src", item.image);
+
+        //guardamos el fragment para evitar reflow
+        fragment.appendChild(clone);
+    });
+    
+    cards.appendChild(fragment);
 }
 
 
