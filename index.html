@@ -10,6 +10,7 @@
     <title>Rick and Morty Api</title>
 </head>
 <body>
+
     <div class="container my-5">
 
         <!-- spinner cargando -->
@@ -18,11 +19,23 @@
             <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
           </section>
 
-          <section class="row" id="card-dinamicas">
 
-            
+          <div id="paginacion">
+                <section id="show-button" class="my-3 d-flex justify-content-between d-none">
+                    <button class="btn btn-outline-secondary">Prev</button>
+                    <button class="btn btn-outline-primary">Next</button>
+            </template>
+
+          </div>
+         
+
+          
+
+          <section class="row" id="card-dinamicas">
           </section>
     </div>
+
+
 
     <!-- tarjetas de personajes -->
     <template id="template-card">
