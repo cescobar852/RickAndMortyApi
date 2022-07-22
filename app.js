@@ -19,9 +19,10 @@ try {
         // console.log(data);
         loadingData(false);
         pintarCard(data);
+        showButton(true)
     }
 
-    setTimeout(timer, 2000);
+    setTimeout(timer, 500);
 
 
 
@@ -65,5 +66,16 @@ const loadingData = estado => {
         loading.classList.remove('d-none')
     } else {
         loading.classList.add('d-none');
+    }
+}
+
+// pintar los button
+const showButton = estado => {
+    const show = document.getElementById("show-button");
+    
+    if (estado) {
+        show.classList.remove('d-none')
+    } else {
+        show.classList.add('d-none');
     }
 }
