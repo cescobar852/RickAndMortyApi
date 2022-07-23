@@ -23,7 +23,7 @@ try {
     }
 
     // cuanto termine el ejercicio reset a 2000
-    setTimeout(timer, 10);
+    setTimeout(timer, 2000);
 
 
 
@@ -73,22 +73,18 @@ const loadingData = estado => {
     }
 }
 
-// pintar los button
-
-// Voy aqui !!!!!!!!!!!
+//Pintar botones despues de loading
 const showButton = estado => {
-    const templatePaginacion = document.getElementById("template-paginacion");
-    const show = document.getElementById("show-button");
-    
-    if (estado) {
-        // show.classList.remove('d-none')
-        console.log(templatePaginacion)
-    } else {
-        // show.classList.add('d-none');
-    }
-}
+    const sectionButton = document.getElementById("section-button");
 
-// Hasta Aqui !!!!!!!!!!
+    if (estado) {
+        sectionButton.classList.remove('d-none');
+        // console.log(sectionButton);
+    } else {
+        sectionButton.classList.add('d-none');
+    }
+
+}
 
 
 // pintar paginacion
