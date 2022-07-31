@@ -90,9 +90,13 @@ const showButton = estado => {
 // pintar paginacion
 const pintarPaginacion = (data) => {
     console.log(data);
-
-    // disabled prev button
-
-    const paginacion = document.getElementById('paginacion');
-
 }
+
+//Click en Next
+
+const btnNext = document.getElementById("next");
+btnNext.addEventListener("click", () => {
+
+    console.log("me diste click");
+
+});
